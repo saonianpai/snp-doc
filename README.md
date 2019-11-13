@@ -1,42 +1,42 @@
-# snp-doc
-少年派-doc
+# ssp-doc
+少数派-doc
 
 ## 首次拉取代码
 1.生成项目专有秘钥对
 ```shell
-mkdir -p ~/.ssh; cd ~/.ssh; ssh-keygen -t rsa -f saonianpai -C "你的邮箱"
+mkdir -p ~/.ssh; cd ~/.ssh; ssh-keygen -t rsa -f shaoshupai -C "你的邮箱"
 ```
 
 2.设置秘钥对文件权限
 ```shell
-chmod 600 saonianpai*
+chmod 600 shaoshupai*
 ```
 
 3.把生成的公钥发给GitHub账号管理者，添加到后台
 ```
-cat saonianpai.pub
+cat shaoshupai.pub
 ```
 
 4.配置本地GitHub账号别名
 编辑~/.ssh/config，添加以下内容(Linux、Mac直接用vim编辑即可，windows用户用任意文本编辑器打开)
 ```shell
-Host saonianpai
+Host shaoshupai
     HostName github.com
     User git
-    IdentityFile ~/.ssh/saonianpai
+    IdentityFile ~/.ssh/shaoshupai
 ```
 
 5.使用ssh-agent管理生成的私钥
 ```shell
-ssh-add saonianpai
+ssh-add shaoshupai
 ```
 
 6.从远程仓库克隆
 ```shell
 # server
-git clone saonianpai:saonianpai/snp-server.git
+git clone shaoshupai:sshpai/ssp-server.git
 # android
-git clone saonianpai:saonianpai/snp-android.git
+git clone shaoshupai:sshpai/ssp-android.git
 # ios
-git clone saonianpai:saonianpai/snp-ios.git
+git clone shaoshupai:sshpai/ssp-ios.git
 ```
